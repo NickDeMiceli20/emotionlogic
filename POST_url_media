@@ -1,0 +1,11 @@
+import requests
+from config import *
+url = requests.post('https://cloud.emlo.cloud/analysis/analyzeFromURL',
+                    {
+                    "url":"https://www.youtube.com/watch?v=uE_GMjDmfss",
+                    "apiKey":api_key ,
+                    "apiKeyPassword":api_key_password ,
+                    "consentObtainedFromDataSubject": True
+                    }
+                    )
+print(url.text)
